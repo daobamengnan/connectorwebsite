@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product Categories</title>
+  <meta name="description" content="Product Categories" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .product-hero-slider {
+      position: relative;
+      width: 100%;
+      height: 430px;
+      border-radius: 22px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      background: #fff;
+      padding: 10px;
+    }
+
+    .product-hero-slider img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
+      background: #fff;
+      opacity: 0;
+      animation: productSlideShow 10s infinite;
+    }
+
+    .product-hero-slider img:nth-child(1) { animation-delay: 0s; }
+    .product-hero-slider img:nth-child(2) { animation-delay: 2s; }
+    .product-hero-slider img:nth-child(3) { animation-delay: 4s; }
+    .product-hero-slider img:nth-child(4) { animation-delay: 6s; }
+    .product-hero-slider img:nth-child(5) { animation-delay: 8s; }
+
+    @keyframes productSlideShow {
+      0% { opacity: 0; }
+      5% { opacity: 1; }
+      20% { opacity: 1; }
+      25% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+
+    @media (max-width: 900px) {
+      .product-hero-slider {
+        height: 280px;
+      }
+    }
+  </style>
+
+</head>
+<body>
+  <header class="topbar">
+    <div class="container nav">
+      <div class="brand">KZ<span>CREEK</span></div>
+   <nav class="nav-links">
+  <a href="index.html">Home</a>
+  <a href="solutions.html">Solutions</a>
+  <a href="products.html">Products</a>
+  <a href="industries.html">Industries</a>
+  <a href="contact.html">Contact</a>
+  <a href="about.html">About</a>
+</nav>
+    </div>
+  </header>
+
+
+  <section class="page-hero product-page-hero">
+    <div class="container">
+      <div class="page-hero-copy">
+        <div class="eyebrow">Product Coverage</div>
+        <h1>What We Provide</h1>
+        <p>Connector, magnetic, board-level, and project-based sourcing coverage for OEM and ODM programs.</p>
+      </div>
+    </div>
+  </section>
+
+  
+  <section id="products">
+    <div class="container">
+      <div class="section-head">
+        <h2>Product & Sourcing Coverage</h2>
+        <p>
+          We support customers across key connector and electronic component categories, with a focus on practical sourcing, alternative part support, and project-based supply coordination.
+        </p>
+      </div>
+
+      <div class="product-intro-strip">
+        <div>
+          <strong>Built for engineering and procurement teams</strong>
+          <span>Send us drawings, BOMs, target part numbers, or application requirements for sourcing review.</span>
+        </div>
+        <a class="btn btn-primary" href="contact.html">Request Sourcing Support</a>
+      </div>
+
+      <div class="product-stack">
+        <div class="product-hero-slider">
+          <img src="rj45.png" alt="Network Connectors" />
+          <img src="high speed connector.png" alt="High-Speed Connectors" />
+          <img src="mag & lan.png" alt="Magnetics and LAN Transformers" />
+          <img src="pin head.png" alt="Pin Headers and Board-Level Connectors" />
+          <img src="customer design.png" alt="Custom and Project-Based Sourcing Solutions" />
+        </div>
+
+        <div class="card product-overview-card">
+          <h3>What We Source</h3>
+          <p>
+            Our product coverage includes network connectors, high-speed interconnects, LAN transformers, magnetic components, board-level connectors, pin headers, and project-based sourcing solutions.
+          </p>
+          <div class="pill-row">
+            <span class="pill">Network Connectors</span>
+            <span class="pill">High-Speed Interconnects</span>
+            <span class="pill">LAN Magnetics</span>
+            <span class="pill">Pin Headers</span>
+            <span class="pill">Custom Sourcing</span>
+          </div>
+        </div>
+
+        <div class="grid-2">
+          <article class="card product-category-card">
+            <span class="category-tag">Ethernet Interface</span>
+            <h3>Network Connectors</h3>
+            <p>
+              Reliable RJ45 and Ethernet connector solutions for routers, switches, servers, gateways, and industrial networking equipment.
+            </p>
+            <div class="pill-row">
+              <span class="pill">RJ45 ICM</span>
+              <span class="pill">Pure RJ45</span>
+              <span class="pill">Multi-Port RJ45</span>
+              <span class="pill">RJ45 + USB</span>
+            </div>
+            <p style="margin-top: 14px; color: var(--muted);">
+              Support for 10/100M, 1G, 2.5G, 5G, and 10G Ethernet applications, with flexible port configurations and PoE-related sourcing options.
+            </p>
+          </article>
+
+          <article class="card product-category-card">
+            <span class="category-tag">Data & Server</span>
+            <h3>High-Speed Connectors</h3>
+            <p>
+              High-speed connector, cage, and interconnect solutions for data centers, servers, switches, storage systems, and advanced communication equipment.
+            </p>
+            <div class="pill-row">
+              <span class="pill">SFP / SFP+</span>
+              <span class="pill">SFP28</span>
+              <span class="pill">QSFP / QSFP28</span>
+              <span class="pill">QSFP-DD</span>
+            </div>
+            <p style="margin-top: 14px; color: var(--muted);">
+              Support for high-bandwidth applications across 1G, 10G, 25G, 40G, 100G, 200G, and 400G related product needs.
+            </p>
+          </article>
+        </div>
+
+        <div class="grid-2">
+          <article class="card product-category-card">
+            <span class="category-tag">Signal Stability</span>
+            <h3>Magnetics & LAN Transformers</h3>
+            <p>
+              LAN transformers and magnetic components for Ethernet signal isolation, impedance matching, EMI suppression, and stable data transmission.
+            </p>
+            <div class="pill-row">
+              <span class="pill">LAN Transformers</span>
+              <span class="pill">Common Mode Filters</span>
+              <span class="pill">SPT / CMF</span>
+              <span class="pill">Surge Protection</span>
+            </div>
+            <p style="margin-top: 14px; color: var(--muted);">
+              We support both discrete magnetics and integrated RJ45 magnetic solutions based on customer design and application requirements.
+            </p>
+          </article>
+
+          <article class="card product-category-card">
+            <span class="category-tag">PCB Integration</span>
+            <h3>Pin Headers & Board-Level Connectors</h3>
+            <p>
+              Standard and project-based board-level interconnect solutions for PCB integration, embedded systems, industrial devices, and consumer electronics.
+            </p>
+            <div class="pill-row">
+              <span class="pill">Pin Headers</span>
+              <span class="pill">Female Headers</span>
+              <span class="pill">Box Headers</span>
+              <span class="pill">Board-to-Board</span>
+            </div>
+            <p style="margin-top: 14px; color: var(--muted);">
+              Available across different pitch, row, mounting, and orientation requirements for flexible PCB design needs.
+            </p>
+          </article>
+        </div>
+
+        <div class="card">
+          <h3>Custom & Project-Based Sourcing Solutions</h3>
+          <p>
+            Beyond individual components, we support project-based sourcing across multiple product categories. This helps customers reduce procurement complexity and coordinate supply around real production needs.
+          </p>
+          <div class="grid-3" style="margin-top: 18px;">
+            <div class="check">
+              <strong>Mixed BOM Support</strong>
+              <span>Support for projects requiring connectors, cables, magnetics, and related electronic components from multiple sources.</span>
+            </div>
+            <div class="check">
+              <strong>Alternative Part Support</strong>
+              <span>Practical sourcing options when customers face cost, availability, or lead time challenges.</span>
+            </div>
+            <div class="check">
+              <strong>Project Coordination</strong>
+              <span>Supply coordination for OEM, ODM, small appliance, industrial, networking, and smart device programs.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Need help finding the right component?</h3>
+          <p>
+            Send us your BOM, drawings, target specifications, or application requirements. We can help identify practical sourcing options and related component solutions.
+          </p>
+          <div class="pill-row">
+            <a class="btn btn-primary" href="contact.html">Request Sourcing Support</a>
+            <a class="btn btn-secondary" href="industries.html">View Applications</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <footer class="footer">
+    <div class="container">
+      © 2026 KZCREEK. All rights reserved. | Built as a service-oriented supply chain website.
+    </div>
+  </footer>
+</body>
+</html>
