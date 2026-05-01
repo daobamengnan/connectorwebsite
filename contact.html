@@ -69,16 +69,31 @@
 
         <div class="card contact-form-card">
           <h3>Project / RFQ Details</h3>
-          <form>
-            <input type="text" placeholder="Name" />
-            <input type="text" placeholder="Company" />
-            <input type="email" placeholder="Business Email" />
-            <input type="text" placeholder="Phone / WhatsApp" />
-            <input type="text" placeholder="Product Category / Part Number" />
-            <input type="text" placeholder="Estimated Quantity" />
-            <input type="text" placeholder="Target Timeline / Lead Time" />
-            <textarea placeholder="Please describe your project, sourcing need, BOM, drawings, target specifications, or alternative part request."></textarea>
-            <button class="btn btn-primary" type="button">Submit Inquiry</button>
+          <form action="https://formspree.io/f/xvzlgbdz" method="POST" class="rfq-form">
+            <input type="hidden" name="_subject" value="New RFQ Inquiry from Josoon Website" />
+            <input type="hidden" name="source" value="josoontech.com contact page" />
+
+            <div class="form-row">
+              <input type="text" name="name" placeholder="Name *" required />
+              <input type="text" name="company" placeholder="Company *" required />
+            </div>
+
+            <div class="form-row">
+              <input type="email" name="email" placeholder="Business Email *" required />
+              <input type="text" name="phone" placeholder="Phone / WhatsApp" />
+            </div>
+
+            <div class="form-row">
+              <input type="text" name="product_category" placeholder="Product Category / Part Number" />
+              <input type="text" name="estimated_quantity" placeholder="Estimated Quantity" />
+            </div>
+
+            <input type="text" name="target_timeline" placeholder="Target Timeline / Lead Time" />
+
+            <textarea name="message" placeholder="Please describe your project, sourcing need, BOM, drawings, target specifications, or alternative part request. *" required></textarea>
+
+            <button class="btn btn-primary" type="submit">Submit Inquiry</button>
+            <p class="form-note">Your inquiry will be sent directly to info@josoontech.com.</p>
           </form>
         </div>
       </div>
@@ -119,7 +134,7 @@
 
       <div class="footer-connect-block">
         <h3>Connect</h3>
-        <p>Email: your-email@example.com</p>
+        <p>Email: info@josoontech.com</p>
         <p>Toronto, Ontario, Canada</p>
         <a class="footer-quote-link" href="contact.html">Request RFQ →</a>
       </div>
